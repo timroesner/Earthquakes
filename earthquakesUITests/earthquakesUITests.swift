@@ -1,42 +1,39 @@
 //
-//  earthquakesUITests.swift
-//  earthquakesUITests
+//  EarthquakesUITests.swift
+//  EarthquakesUITests
 //
 //  Created by Tim Roesner on 7/3/20.
 //
 
 import XCTest
 
-class earthquakesUITests: XCTestCase {
+class EarthquakesUITests: XCTestCase {
+    let app = XCUIApplication()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    override class func setUp() {
+        super.setUp()
+        XCUIApplication().launch()
+    }
+    
+    func testDetailNavigation() {
+        waitForExistence(of: app.cells.firstMatch)
+        app.cells.firstMatch.tap()
+        waitForExistence(of: app.maps.firstMatch)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testLocationPermission() throws {
+        app.resetAuthorizationStatus(for: .location)
+        app.buttons["Filter"].tap()
+        app.accessibilityScroll(.down)
+        app.cells["10km Radius"].firstMatch.tap()
+        
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        waitForExistence(of: springboard.alerts.firstMatch)
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    func waitForExistence(of element: XCUIElement) {
+        let predicate = NSPredicate(format: "exists == TRUE")
+        expectation(for: predicate, evaluatedWith: element, handler: nil)
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
 }

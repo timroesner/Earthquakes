@@ -1,6 +1,6 @@
 //
-//  earthquakesTests.swift
-//  earthquakesTests
+//  EarthquakesTests.swift
+//  EarthquakesTests
 //
 //  Created by Tim Roesner on 7/3/20.
 //
@@ -10,7 +10,7 @@ import CoreLocation
 import Combine
 @testable import Earthquakes
 
-class earthquakesTests: XCTestCase {
+class EarthquakesTests: XCTestCase {
     var token: Cancellable?
 
     override func setUpWithError() throws {
