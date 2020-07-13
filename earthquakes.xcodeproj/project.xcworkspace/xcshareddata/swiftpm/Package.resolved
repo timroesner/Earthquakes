@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CoreUI",
+        "repositoryURL": "https://github.com/timroesner/CoreUI.git",
+        "state": {
+          "branch": "master",
+          "revision": "6bf1e0b3f12aa88180a5242c45f8417d028b8024",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
