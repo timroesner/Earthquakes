@@ -18,6 +18,7 @@
 		225A43DA24AFC05700ACA5EF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225A43D924AFC05700ACA5EF /* Preview Assets.xcassets */; };
 		225A43E824AFC05700ACA5EF /* EarthquakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A43E724AFC05700ACA5EF /* EarthquakesTests.swift */; };
 		225A43F324AFC05700ACA5EF /* EarthquakesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225A43F224AFC05700ACA5EF /* EarthquakesUITests.swift */; };
+		2289F81724BC340A0065331C /* EarthquakesAutomatedScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2289F81624BC340A0065331C /* EarthquakesAutomatedScreenshots.swift */; };
 		22B5110D24B834D200ACD46A /* earthquakes_all_week.json in Resources */ = {isa = PBXBuildFile; fileRef = 22B5110C24B834D200ACD46A /* earthquakes_all_week.json */; };
 		22B5110E24B83E4400ACD46A /* earthquakes_all_week.json in Resources */ = {isa = PBXBuildFile; fileRef = 22B5110C24B834D200ACD46A /* earthquakes_all_week.json */; };
 		22C1D5A824B1072600B9E97D /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22C1D5A724B1072600B9E97D /* CoreUI */; };
@@ -62,6 +63,7 @@
 		225A43EE24AFC05700ACA5EF /* EarthquakesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		225A43F224AFC05700ACA5EF /* EarthquakesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesUITests.swift; sourceTree = "<group>"; };
 		225A43F424AFC05700ACA5EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2289F81624BC340A0065331C /* EarthquakesAutomatedScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EarthquakesAutomatedScreenshots.swift; path = ../../Earthquakes/EarthquakesUITests/EarthquakesAutomatedScreenshots.swift; sourceTree = "<group>"; };
 		22B5110C24B834D200ACD46A /* earthquakes_all_week.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = earthquakes_all_week.json; path = SampleData/earthquakes_all_week.json; sourceTree = SOURCE_ROOT; };
 		22B5110F24B8449D00ACD46A /* Earthquakes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Earthquakes.entitlements; sourceTree = "<group>"; };
 		22C1D5A924B5796900B9E97D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				225A43F224AFC05700ACA5EF /* EarthquakesUITests.swift */,
+				2289F81624BC340A0065331C /* EarthquakesAutomatedScreenshots.swift */,
 				225A43F424AFC05700ACA5EF /* Info.plist */,
 			);
 			path = EarthquakesUITests;
@@ -237,6 +240,7 @@
 				225A43EA24AFC05700ACA5EF /* Sources */,
 				225A43EB24AFC05700ACA5EF /* Frameworks */,
 				225A43EC24AFC05700ACA5EF /* Resources */,
+				2289F81824BC34CC0065331C /* Clean Status Bar */,
 			);
 			buildRules = (
 			);
@@ -322,6 +326,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2289F81824BC34CC0065331C /* Clean Status Bar */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Clean Status Bar";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcrun simctl status_bar booted override --time 9:41 --operatorName ' ' --cellularMode active --cellularBar 4 --wifiBars 3 --batteryState charged\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		225A43C924AFC05300ACA5EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -353,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				225A43F324AFC05700ACA5EF /* EarthquakesUITests.swift in Sources */,
+				2289F81724BC340A0065331C /* EarthquakesAutomatedScreenshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
