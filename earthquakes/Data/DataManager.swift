@@ -56,7 +56,7 @@ class DataManager: NSObject, ObservableObject {
         }
         
         didSet {
-            switch locationManager.authorizationStatus() {
+			switch locationManager.authorizationStatus {
             case .authorizedWhenInUse:
                 locationFilterStorage = locationFilter
                 filteredEarthquakes = earthquakes.filter(isWithinLocationFilterRadius(_:))
