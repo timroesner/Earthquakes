@@ -54,6 +54,7 @@ private struct SelectionCell<T: TitleRepresentable>: View {
     var body: some View {
         HStack {
             Text(value.title)
+				.font(.bodyStyle)
             Spacer()
             if selectedValue == value {
                 Image(systemName: "checkmark")
