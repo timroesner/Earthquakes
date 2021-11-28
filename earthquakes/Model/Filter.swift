@@ -56,15 +56,15 @@ enum MagnitudeFilter: String, TitleRepresentable, CaseIterable {
 }
 
 enum LocationFilter: String, TitleRepresentable, CaseIterable {
-    case all, radius10, radius25, radius50, radius100
+    case all, radius50, radius100, radius200, radius400
     
     var title: String {
         switch self {
         case .all: return "All"
-        case .radius10: return "10km Radius"
-        case .radius25: return "25km Radius"
         case .radius50: return "50km Radius"
         case .radius100: return "100km Radius"
+        case .radius200: return "200km Radius"
+        case .radius400: return "400km Radius"
         }
     }
     
@@ -72,10 +72,10 @@ enum LocationFilter: String, TitleRepresentable, CaseIterable {
     var distance: Double {
         switch self {
         case .all: return Double.greatestFiniteMagnitude
-        case .radius10: return 10_000
-        case .radius25: return 25_000
         case .radius50: return 50_000
         case .radius100: return 100_000
+        case .radius200: return 200_000
+        case .radius400: return 400_000
         }
     }
 }
