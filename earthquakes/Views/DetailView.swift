@@ -31,7 +31,7 @@ struct DetailView: View {
         GeometryReader { reader in
             VStack {
                 Map(coordinateRegion: $coordinateRegion, annotationItems: [earthquake]) { item in
-                    MapMarker(coordinate: item.location.coordinate)
+                    MapPin(coordinate: item.location.coordinate)
                 }
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 2 * reader.size.height / 3)
