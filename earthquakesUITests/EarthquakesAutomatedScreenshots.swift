@@ -19,8 +19,13 @@ class EarthquakesAutomatedScreenshots: XCTestCase {
         waitForExistence(of: app.cells.firstMatch)
         add(takePromoShot(name: "List"))
         
+        app.tabBars.buttons["Map"].tap()
+        waitForExistence(of: app.maps.element.otherElements.firstMatch)
+        add(takePromoShot(name: "Map"))
+        
+        app.tabBars.buttons["List"].tap()
         app.cells.firstMatch.tap()
-        waitForExistence(of: app.maps.firstMatch)
+        waitForExistence(of: app.maps.element.otherElements.firstMatch)
         add(takePromoShot(name: "Detail"))
         
         if app.navigationBars.buttons["Earthquakes"].exists {
