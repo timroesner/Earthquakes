@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2222A77F2698F77600ABBCC8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222A77E2698F77600ABBCC8 /* MapView.swift */; };
 		2240705B24B845F200E4972F /* EarthquakesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240705A24B845F200E4972F /* EarthquakesApp.swift */; };
 		2240705E24BBF50500E4972F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240705D24BBF50500E4972F /* Filter.swift */; };
 		225142AD24AFC0F2007C77FA /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225142AC24AFC0F2007C77FA /* Earthquake.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2222A77E2698F77600ABBCC8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2240705A24B845F200E4972F /* EarthquakesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesApp.swift; sourceTree = "<group>"; };
 		2240705D24BBF50500E4972F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		225142AC24AFC0F2007C77FA /* Earthquake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				225A43D424AFC05300ACA5EF /* ListView.swift */,
 				225142B424B10561007C77FA /* ListCell.swift */,
+				2222A77E2698F77600ABBCC8 /* MapView.swift */,
 				22FD686624B818AE0039657C /* FilterView.swift */,
 				22C1D5A924B5796900B9E97D /* DetailView.swift */,
 			);
@@ -355,6 +358,7 @@
 				22FD686524B814A40039657C /* DataLoader.swift in Sources */,
 				2240705E24BBF50500E4972F /* Filter.swift in Sources */,
 				22C1D5AA24B5796900B9E97D /* DetailView.swift in Sources */,
+				2222A77F2698F77600ABBCC8 /* MapView.swift in Sources */,
 				225142B324AFF37B007C77FA /* DataManager.swift in Sources */,
 				22C1D5AC24B5902900B9E97D /* Formatters.swift in Sources */,
 				225142AD24AFC0F2007C77FA /* Earthquake.swift in Sources */,
@@ -432,6 +436,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -450,6 +455,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -493,6 +499,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -505,6 +512,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -521,6 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Earthquakes/Earthquakes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"earthquakes/Preview Content\"";
 				DEVELOPMENT_TEAM = 7BT7DC73YL;
 				ENABLE_PREVIEWS = YES;
@@ -529,11 +538,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timroesner.earthquakes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -544,6 +554,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Earthquakes/Earthquakes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"earthquakes/Preview Content\"";
 				DEVELOPMENT_TEAM = 7BT7DC73YL;
 				ENABLE_PREVIEWS = YES;
@@ -552,11 +563,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.timroesner.earthquakes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
